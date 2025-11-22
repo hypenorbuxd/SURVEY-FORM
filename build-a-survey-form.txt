@@ -1,0 +1,141 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Form</title>
+
+  <!-- Required -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1 id="title">Student Feedback Survey</h1>
+  <p id="description">Please fill out this short survey to help us understand your experience. Thank you!</p>
+
+  <form id="survey-form">
+
+    <!-- Name -->
+    <label id="name-label" for="name">Name:</label>
+    <input 
+      id="name" 
+      type="text" 
+      placeholder="Enter your full name" 
+      required
+    />
+
+    <!-- Email -->
+    <label id="email-label" for="email">Email:</label>
+    <input
+      id="email"
+      type="email"
+      placeholder="Enter your email"
+      required
+    />
+
+    <!-- Number -->
+    <label id="number-label" for="number">Age:</label>
+    <input
+      id="number"
+      type="number"
+      min="10"
+      max="100"
+      placeholder="Enter your age"
+    />
+
+    <!-- Dropdown -->
+    <label for="dropdown">Which option best describes you?</label>
+    <select id="dropdown">
+      <option value="student">Student</option>
+      <option value="teacher">Teacher</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- Radio Buttons -->
+    <p>How satisfied are you with this course?</p>
+    <label>
+      <input type="radio" name="satisfaction" value="good" />
+      Good
+    </label>
+    <label>
+      <input type="radio" name="satisfaction" value="excellent" />
+      Excellent
+    </label>
+
+    <!-- Checkboxes -->
+    <p>What topics did you enjoy? (Check all that apply)</p>
+    <label>
+      <input type="checkbox" value="html" />
+      HTML
+    </label>
+    <label>
+      <input type="checkbox" value="css" />
+      CSS
+    </label>
+    <label>
+      <input type="checkbox" value="javascript" />
+      JavaScript
+    </label>
+
+    <!-- Textarea -->
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" placeholder="Write your feedback here..."></textarea>
+
+    <!-- Submit Button -->
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+#survey-form {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label, p {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 20px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background: #43a047;
+}
+
+
+** end of styles.css **
+
